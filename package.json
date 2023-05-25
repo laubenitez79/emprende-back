@@ -1,0 +1,12 @@
+{
+  "name": "emprende-full-stack",
+  "version": "1.0.0",
+  "description": "Curso de Martin Gesualdo",
+  "main": "index.js",
+  "author": "laubenitez79 <lauti.benitez.nahuel@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
