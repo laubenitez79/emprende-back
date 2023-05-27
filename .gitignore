@@ -1,3 +1,4 @@
 /node_modules
 /public
 another.js
+.env

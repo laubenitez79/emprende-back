@@ -7,10 +7,11 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "dev" : "nodemon public/index.js",
-    "start" : "node public/index.js"
+    "dev": "nodemon public/index.js",
+    "start": "node public/index.js"
   },
   "devDependencies": {
+    "dotenv": "^16.0.3",
     "nodemon": "^2.0.22"
   }
 }

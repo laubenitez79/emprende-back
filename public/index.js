@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const http = require("http")
 const exportsFromAnother = require("./another")
 
@@ -7,6 +9,10 @@ function requestController() {
     console.log("hola mundo!!!");
 }
 
+const PORT = process.env.PORT;
+
 const server = http.createServer(requestController)
 
-server.listen(4000)
+server.listen(PORT , function () {
+    console.log("Aplicacion corriendo en el puerto " + PORT);
+})
