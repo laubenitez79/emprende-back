@@ -1,9 +1,9 @@
 require('dotenv').config()
 
 const http = require("http")
-const exportsFromAnother = require("./another")
+// const exportsFromAnother = require("./another")
 
-console.log({exportsFromAnother});
+// console.log({exportsFromAnother});
 
 function requestController() {
     console.log("hola mundo!!!");
