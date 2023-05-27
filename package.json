@@ -6,6 +6,9 @@
   "author": "laubenitez79 <lauti.benitez.nahuel@gmail.com>",
   "license": "MIT",
   "private": false,
+  "scripts": {
+    "dev" : "nodemon public/index.js"
+  },
   "devDependencies": {
     "nodemon": "^2.0.22"
   }
