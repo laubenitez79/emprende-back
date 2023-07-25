@@ -1,7 +1,7 @@
 require('dotenv').config()
 
 const http = require("http")
-const fs = require("fs")
+// const fs = require("fs")
 
 function requestController(req , res) {
     const url = req.url 
@@ -10,26 +10,30 @@ function requestController(req , res) {
 
     if (method === "GET" && url === "/") {
         res.setHeader("Content-type" , "text/html; charset=utf-8")
-        fs.readFile("./public/index.html", function (err, file) {
-            if (err) {
-                console.log("Hubo un error");
-            } 
-            res.write(file)
-            res.end()
+        res.write('<h1>Hola pagina Principal</h1>')
+        res.end()
+        // fs.readFile("./public/index.html", function (err, file) {
+        //     if (err) {
+        //         console.log("Hubo un error");
+        //     } 
+        //     res.write(file)
+        //     res.end()
             
-        })
+        // })
         return
     }
     if (method === "GET" && url === "/about") {
         res.setHeader("Content-type" , "text/html; charset=utf-8")
-        fs.readFile("./public/about.html", function (err, file) {
-            if (err) {
-                console.log("Hubo un error");
-            } 
-            res.write(file)
-            res.end()
+        res.write('<h2>Hola pagina About</h2>')
+        // fs.readFile("./public/about.html", function (err, file) {
+        //     if (err) {
+        //         console.log("Hubo un error");
+        //     } 
+        //     res.write(file)
+        //     res.end()
             
-        })
+        // })
+        res.end()
         return
     }
 
