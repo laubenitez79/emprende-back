@@ -12,7 +12,11 @@ function requestController(req , res) {
         res.setHeader("Content-type" , "text/html; charset=utf-8")
         fs.readFile("./public/index.html", function (err, file) {
             if (err) {
-                console.log("Hubo un error");
+                console.log("Hubo un error al leer el archivo:", err);
+                res.statusCode = 500;
+                res.write("<h1>Error interno del servidor</h1>");
+                res.end();
+                return;
             } 
             res.write(file)
             res.end()
@@ -24,7 +28,11 @@ function requestController(req , res) {
         res.setHeader("Content-type" , "text/html; charset=utf-8")
         fs.readFile("./public/about.html", function (err, file) {
             if (err) {
-                console.log("Hubo un error");
+                console.log("Hubo un error al leer el archivo:", err);
+                res.statusCode = 500;
+                res.write("<h1>Error interno del servidor</h1>");
+                res.end();
+                return;
             } 
             res.write(file)
             res.end()
