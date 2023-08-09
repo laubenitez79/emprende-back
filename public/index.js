@@ -3,7 +3,7 @@ const inputTask = document.querySelector('#task-name')
 const tasksContainer = document.querySelector("#tasks-container")
 let TASK_TO_EDIT = null
 
-const baseBackEndUrl = "http://localhost:4000/api"
+const baseBackEndUrl = `${window.origin}/api`
 
 createEditButton.addEventListener("click" , function () {
     const creating = !TASK_TO_EDIT
