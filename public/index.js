@@ -5,6 +5,8 @@ let TASK_TO_EDIT = null
 
 const baseBackEndUrl = `${window.origin}/api`
 
+console.log({baseBackEndUrl})
+
 createEditButton.addEventListener("click" , function () {
     const creating = !TASK_TO_EDIT
     const path = creating ? "tasks" : `tasks/${TASK_TO_EDIT._id}`
